@@ -22,32 +22,6 @@ dots.forEach(function(item, index) {
 	});
 });
 
-dots.forEach(function(item, index) {
-	item.addEventListener('touchstart', function(e){
-		e.preventDefault();
-
-		var touchobj = e.changedTouches[0];
-		startx = parseInt(touchobj.clientX);
-		
-	}, false);
-
-	item.addEventListener('touchmove', function(e){
-		e.preventDefault();
-
-		var touchobj = e.changedTouches[0];
-		var dist = parseInt(touchobj.clientX) - startx;
-		timeLine.style.transform = 'rotate(' + dist/6 + angles[index] + 'deg)';
-	}, false);
-
-	item.addEventListener('touchend', function(e){
-		var touchobj = e.changedTouches[0];
-		startx = dist
-
-		e.preventDefault();
-		
-	}, false);
-});
-
 if (timeLine.addEventListener) {
 	if ('onwheel' in document) {
 	    // IE9+, FF17+, Ch31+
