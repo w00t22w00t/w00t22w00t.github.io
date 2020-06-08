@@ -9,6 +9,7 @@ line = document.querySelector('.line');
 let beforeItem = 0;
 let count = 4;
 var startx = 0;
+var dist = 0;
 
 dots.forEach(function(item, index) {
 	item.addEventListener('click', function(){
@@ -27,6 +28,7 @@ dots.forEach(function(item, index) {
 
 		var touchobj = e.changedTouches[0];
 		startx = parseInt(touchobj.clientX);
+		
 	}, false);
 
 	item.addEventListener('touchmove', function(e){
@@ -34,11 +36,12 @@ dots.forEach(function(item, index) {
 
 		var touchobj = e.changedTouches[0];
 		var dist = parseInt(touchobj.clientX) - startx;
-		timeLine.style.transform = 'rotate(' + dist/6 + 'deg)';
+		timeLine.style.transform = 'rotate(' + dist/6 + angles[index] + 'deg)';
 	}, false);
 
 	item.addEventListener('touchend', function(e){
 		var touchobj = e.changedTouches[0];
+		startx = dist
 
 		e.preventDefault();
 		
