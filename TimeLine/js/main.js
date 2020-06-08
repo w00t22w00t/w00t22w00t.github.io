@@ -1,10 +1,10 @@
 const angles = [38, 28, 18, 8, 0, -8, -18, -28, -38];
 
 const timeLine = document.querySelector('.time-line'),
-      dots = document.querySelectorAll('.time-line .rotate'),
-      descWindow = document.querySelector('.desc-block'),
-      windowYear = document.querySelector('.block-year'),
-      line = document.querySelector('.line');
+dots = document.querySelectorAll('.time-line .rotate'),
+descWindow = document.querySelector('.desc-block'),
+windowYear = document.querySelector('.block-year'),
+line = document.querySelector('.line');
 
 let beforeItem = 0;
 let count = 4;
@@ -22,22 +22,22 @@ dots.forEach(function(item, index) {
 });
 
 dots.forEach(function(item, index) {
-	item.addEventListener('touchstart', function(){
+	item.addEventListener('touchstart', function(e){
 		e.preventDefault();
 
 		var touchobj = e.changedTouches[0];
-        startx = parseInt(touchobj.clientX);
+		startx = parseInt(touchobj.clientX);
 	}, false);
 
-	item.addEventListener('touchmove', function(){
+	item.addEventListener('touchmove', function(e){
 		e.preventDefault();
 
 		var touchobj = e.changedTouches[0];
-        var dist = parseInt(touchobj.clientX) - startx;
-        timeLine.style.transform = 'rotate(' + dist/6 + 'deg)';
+		var dist = parseInt(touchobj.clientX) - startx;
+		timeLine.style.transform = 'rotate(' + dist/6 + 'deg)';
 	}, false);
 
-	item.addEventListener('touchend', function(){
+	item.addEventListener('touchend', function(e){
 		var touchobj = e.changedTouches[0];
 
 		e.preventDefault();
