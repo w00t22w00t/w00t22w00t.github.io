@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chuck</title>
+	<link rel="shortcut icon" href="https://assets.chucknorris.host/img/avatar/chuck-norris.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div class="container">
+		<section class="main">
+			<div class="wrap main__wrap">
+				<div class="main__header">
+					<h1>MSI 2020</h1>
+					<h2>Hey!</h2>
+					<p>Let's try to find a joke for you:</p>
+				</div>
+
+				<ul class="mode">
+					<li class="mode__li">
+						<label class="mode__item">
+							<input class="mode__input" type="radio" name="type-search" value="random">
+							<span class="mode__item__text">Random</span>
+						</label>
+					</li>
+					<li class="mode__li">
+						<label class="mode__item">
+							<input class="mode__input mode__input-category" type="radio" name="type-search" value="category">
+							<span class="mode__item__text">From categories</span>
+							<div class="category">
+								<label>
+									<input type="radio" name="category" value='animal'>
+									<div class="category__item">animal</div>
+								</label>
+								<label>
+									<input type="radio" name="category" value='career'>
+									<div class="category__item">career</div>
+								</label>
+								<label>
+									<input type="radio" name="category" value='celebrity'>
+									<div class="category__item">celebrity</div>
+								</label>
+								<label>
+									<input type="radio" name="category" value='dev'>
+									<div class="category__item">dev</div>
+								</label>
+							</div>
+						</label>
+					</li>
+					<li class="mode__li">
+						<label class="mode__item">
+							<input  class="mode__input mode__input-search" type="radio" name="type-search" value="search">
+							<span class="mode__item__text">Search</span>
+							<div class="search">
+								<input type="text" name="search-joke" value="" placeholder="Free text search...">
+							</div>
+						</label>
+					</li>
+				</ul>
+				
+				<div class="get-joke">
+					<button class="get-joke-bttn">Get a joke</button>
+				</div>
+				<div class="joke-root">
+					
+				</div>
+			</div>
+		</section>
+		<section class="favourites">
+			<div class="wrap favourites__wrap">
+				<div class="favourites__header">
+					<button class="favourites__hamburger">
+						<span>toggle menu</span>
+					</button>
+					<span class="favourites__title">Favourite</span>
+				</div>
+				<div class="favourites__body">
+
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="favourites__overlay"></div>
+	
+	<script src="js/main.js"></script>
+</body>
+</html>

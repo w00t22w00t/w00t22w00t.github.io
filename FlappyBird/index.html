@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GameDev Canvas</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<canvas id="canvas" width="480px" height="320px"></canvas>
+		<div class="modal">
+			<div class="modal-overlay">
+				<div class="modal-window">
+					<div class="modal__header">
+						<p>Ты проиграл</p>
+						<button class="modal__header__exit" data-close='true'>&#10006;</button>
+					</div>
+					<div class="modal__main-text">
+						<p>Твой результат: <span></span></p>
+					</div>
+					<div class="modal__buttons">
+						<button class="modal__buttons__agree">Начать новую игру</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
